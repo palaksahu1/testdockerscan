@@ -35,3 +35,10 @@ steps:
     allowBypassArchiveLimits: false
     threads: '3'
     skipLogin: false
+
+- task: JfrogCliV2@1
+  inputs:
+    jfrogPlatformConnection: 'myjfrogplat'
+    useCustomVersion: true
+    cliVersion: '2.75.0'
+    command: 'jf docker scan hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
