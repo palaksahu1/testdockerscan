@@ -20,6 +20,8 @@ steps:
 
 - task: JFrogDocker@1
   inputs:
+    useCustomVersion: true
+    cliVersion: '2.75.0'
     command: 'Pull'
     artifactoryConnection: 'jfart'
     imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
