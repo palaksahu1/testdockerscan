@@ -24,3 +24,14 @@ steps:
     artifactoryConnection: 'jfart'
     imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
     skipLogin: false
+
+- task: JFrogDocker@1
+  inputs:
+    command: 'Scan'
+    xrayConnection: 'jfxray'
+    imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
+    watchesSource: 'none'
+    licenses: true
+    allowBypassArchiveLimits: false
+    threads: '3'
+    skipLogin: false
