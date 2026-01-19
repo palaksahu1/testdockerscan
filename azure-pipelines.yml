@@ -33,6 +33,7 @@ steps:
     xrayConnection: 'jfxray'
     imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
     watchesSource: 'project'
+    project: 'testaz'
     licenses: true
     allowBypassArchiveLimits: false
     threads: '3'
