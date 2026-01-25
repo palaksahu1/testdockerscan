@@ -32,8 +32,8 @@ steps:
     command: 'Scan'
     xrayConnection: 'jfxray'
     imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
-    watchesSource: 'project'
-    project:    'testaz'
+    watchesSource: 'watches'
+    watches:     'test-plk-az'
     licenses: true
     allowBypassArchiveLimits: false
     threads: '3'
