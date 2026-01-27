@@ -43,6 +43,6 @@ steps:
   inputs:
     jfrogPlatformConnection: 'myjfrogplat'
     useCustomVersion: true
-    cliVersion: '2.75.0'
+    cliVersion: '2.89.0'
     command: 'jf docker scan hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
     
