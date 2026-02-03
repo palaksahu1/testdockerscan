@@ -13,11 +13,18 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: echo $JFROG_CLI_LOG_LEVEL
+  displayName: 'DEBUG'
+
+
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     echo ${env:JFROGCLIVERSION}
   displayName: 'Run a multi-line script'
+
+
 
 
 - task: JFrogDocker@1
@@ -37,10 +44,10 @@ steps:
     threads: '3'
     skipLogin: false
 
-- task: JfrogCliV2@1
-  inputs:
-    jfrogPlatformConnection: 'myjfrogplat'
-    useCustomVersion: true
-    cliVersion: '2.89.0'
-    command: 'jf docker scan hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
+#- task: JfrogCliV2@1
+#  inputs:
+ #   jfrogPlatformConnection: 'myjfrogplat'
+  ##  useCustomVersion: true
+    ##cliVersion: '2.89.0'
+    ##command: 'jf docker scan hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
     
