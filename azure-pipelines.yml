@@ -52,5 +52,5 @@ steps:
     jfrogPlatformConnection: 'myjfrogplat'
     useCustomVersion: true
     cliVersion: '2.93.0'
-    command: 'jf docker scan adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
+    command: 'jf docker scan adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2 --projects=testaz --vuln'
     
