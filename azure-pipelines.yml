@@ -34,6 +34,7 @@ steps:
     imageName: 'adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2'
     skipLogin: false
 
+
 - task: JFrogDocker@1
   inputs:
     command: 'Scan'
