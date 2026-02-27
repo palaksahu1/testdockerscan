@@ -31,14 +31,14 @@ steps:
   inputs:
     command: 'Pull'
     artifactoryConnection: 'jfart'
-    imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
+    imageName: 'adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2'
     skipLogin: false
 
 - task: JFrogDocker@1
   inputs:
     command: 'Scan'
     xrayConnection: 'jfxray'
-    imageName: 'hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2'
+    imageName: 'adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2'
     watchesSource: 'watches'
     watches: 'test-plk-az'
     licenses: true
@@ -51,5 +51,5 @@ steps:
     jfrogPlatformConnection: 'myjfrogplat'
     useCustomVersion: true
     cliVersion: '2.93.0'
-    command: 'jf docker scan hts2-test-plk-docker-local.jfrog.io/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
+    command: 'jf docker scan adoption.jfrog.io/test-plk-docker-local/jfrog/router:7.135.2 --watches=test-plk-az --vuln'
     
